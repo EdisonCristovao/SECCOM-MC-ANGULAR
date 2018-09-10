@@ -27,6 +27,27 @@ O projeto é executado na url `http://localhost:4200/`, use o navegador para ace
 O objetivo é criar um FAKE OLX, cada um criará o seu. Para aqueles que querem uma ideia segue um [mockup](https://projects.invisionapp.com/share/A6GOUOHD4RW#/screens) oferecido pela [centrics](https://github.com/centrics).
 
 ## Instalação Bootstrap
+Para instalar o bootstrap use o comando.
+```
+npm install bootstrap
+```
+adicione no seu css global.
+```
+@import '~bootstrap/dist/css/bootstrap.min.css';
+```
+
+## Instalação JSON-sever
+Para instalar o json-server use o comando.
+```
+npm install -g json-server
+```
+
+Dentro do seu projeto cria um arquivo `db/db.json`, então ja é possivel executar o json-serve com o seguinte comando.
+```
+json-server --watch db/db.json
+```
+
+Documentação do [JSON-server](https://github.com/typicode/json-server).
 
 
 # SECCOM-MC-ANGULAR
