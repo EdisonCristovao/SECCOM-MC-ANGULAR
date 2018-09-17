@@ -49,5 +49,8 @@ json-server --watch db/db.json
 
 Documentação do [JSON-server](https://github.com/typicode/json-server).
 
+## Problemas com hot reload
 
-# SECCOM-MC-ANGULAR
+```
+echo 65536 | sudo tee -a /proc/sys/fs/inotify/max_user_watches
+```
