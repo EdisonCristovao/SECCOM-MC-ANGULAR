@@ -1,10 +1,14 @@
-<div class="d-flex w-100 justify-content-center">
-  <app-side-bar-categorias></app-side-bar-categorias>
-  <div class="d-flex flex-column w-100">
-    <div *ngFor="let produto of this.produtos" class="card w-75 mb-4">
-      <div class="card-body">
-        <h1>{{ produto.descricao }}</h1>
-      </div>
+<div class="container-fluid">
+    <div class="row mb-2">
+        <div class="col-3 pr-0"> </div>
+        <div class="col-9 text-left"> <small> Encontrados</small></div>
     </div>
-  </div>
+    <div class="row">
+        <div class="col-3">
+          <app-side-bar-categorias></app-side-bar-categorias>
+        </div>
+        <div class="col-9">
+            <app-show-item *ngFor="let produto of produtos" [produto]="produto" ></app-show-item>
+        </div>
+    </div>
 </div>

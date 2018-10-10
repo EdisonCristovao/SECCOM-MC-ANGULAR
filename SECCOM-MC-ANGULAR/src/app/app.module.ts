@@ -8,6 +8,7 @@ import { HeaderComponent } from './template/header/header.component';
 import { FooterComponent } from './template/footer/footer.component';
 import { ListProdutosComponent } from './components/produtos/list-produtos/list-produtos.component';
 import { SideBarCategoriasComponent } from './components/side-bar/side-bar-categorias/side-bar-categorias.component';
+import { ShowItemComponent } from './components/produtos/show-item/show-item.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { SideBarCategoriasComponent } from './components/side-bar/side-bar-categ
     HeaderComponent,
     FooterComponent,
     ListProdutosComponent,
-    SideBarCategoriasComponent
+    SideBarCategoriasComponent,
+    ShowItemComponent
     
   ],
   imports: [

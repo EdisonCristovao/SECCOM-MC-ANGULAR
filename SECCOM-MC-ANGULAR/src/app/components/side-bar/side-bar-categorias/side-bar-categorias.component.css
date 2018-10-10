@@ -1,0 +1,19 @@
+
+.card-header {
+    height: 100px;
+}
+.card-header {
+    background-color: white;
+}
+.card-body {
+    padding: 0px 0px 0px 0px;
+}
+a{
+    width: 100%;
+    text-align: left;
+    padding-left: 5%;
+    border: 1px solid #d2d6de;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    font-size: 18px;
+}
