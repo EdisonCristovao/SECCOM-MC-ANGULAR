@@ -1,0 +1,10 @@
+<div class="d-flex w-100 justify-content-center">
+  <app-side-bar-categorias></app-side-bar-categorias>
+  <div class="d-flex flex-column w-100">
+    <div *ngFor="let produto of this.produtos" class="card w-75 mb-4">
+      <div class="card-body">
+        <h1>{{ produto.descricao }}</h1>
+      </div>
+    </div>
+  </div>
+</div>
