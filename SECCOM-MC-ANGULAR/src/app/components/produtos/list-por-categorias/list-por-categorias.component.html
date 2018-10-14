@@ -1,0 +1,17 @@
+<div class="container-fluid">
+
+  <div class="row mb-2">
+      <div class="col-3 pr-0"> </div>
+      <div class="col-9 text-left"> <small> {{ produtos.length }} Produtos encontrados </small></div>
+  </div>
+  
+  <div class="row">
+      <div class="col-md-3 sideBar">
+        <app-side-bar-categorias></app-side-bar-categorias>
+      </div>
+      <div class="col-md-9 col-12">
+          <app-show-item *ngFor="let produto of produtos" [produto]="produto" ></app-show-item>
+      </div>
+  </div>
+
+</div>

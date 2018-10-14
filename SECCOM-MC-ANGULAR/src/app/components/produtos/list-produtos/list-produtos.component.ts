@@ -1,5 +1,8 @@
-import { Produto } from './../../../../model/Produtos';
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+
+import { Produto } from './../../../../model/Produtos';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-list-produtos',
@@ -8,23 +11,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListProdutosComponent implements OnInit {
 
-  produtos: Produto[];
+  produtos: any[] = [];
 
-  constructor() { 
 
+  constructor(private http: HttpClient) { 
   }
 
   ngOnInit() {
-    this.produtos = [
-      {codigo: 1, descricao: "Carro novo", categoria: 1, price: 9000},
-      {codigo: 2, descricao: "Carro novo", categoria: 1, price: 9000},
-      {codigo: 3, descricao: "Carro novo", categoria: 1, price: 9000},
-      {codigo: 4, descricao: "Carro novo", categoria: 1, price: 9000},
-      {codigo: 5, descricao: "Carro novo", categoria: 1, price: 9000},
-      {codigo: 6, descricao: "Carro novo", categoria: 1, price: 9000}
-    ];
-    console.log(this.produtos);
-
+    this.http.get("http://localhost:3000/produtos").toPromise()
+    .then(data => {
+      this.produtos = data;
+    });
   }
 
 }
