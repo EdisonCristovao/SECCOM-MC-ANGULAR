@@ -1,0 +1,34 @@
+<div class="card my-2">
+  <div class="card-header bg-white">
+    <h3>Cadastro Produto</h3>
+  </div>
+  {{ produto | json }}
+  <div class="card-body">
+    <form>
+      <div class="form-row">
+        <div class="form-group col-md-12">
+          <label for="inputEmail4">Descriçao</label>
+          <input type="text" class="form-control" id="inputEmail4" placeholder="Descriçao" name="descricao" [(ngModel)]="produto.descricao">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputCity">Preço</label>
+          <input type="text" class="form-control" id="preco" name="preco" [(ngModel)]="produto.price">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputState">Categoria</label>
+          <select id="inputState" class="form-control" name="categoria" [(ngModel)]="produto.categoria">
+            <option value="1" >Carro</option>
+            <option value="2"> Motos </option>
+            <option value="3"> Aluguel de imóveis </option>
+            <option value="4"> Eletrônicos </option>
+            <option value="5"> Para Sua casa </option>
+          </select>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary" (click)="salvarProduto()">Salvar Produto</button>
+    </form>
+  </div>
+
+</div>

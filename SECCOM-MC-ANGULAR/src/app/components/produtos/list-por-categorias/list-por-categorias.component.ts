@@ -1,3 +1,4 @@
+import { environment } from './../../../../environments/environment.prod';
 import { ActivatedRoute } from '@angular/router';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
@@ -9,13 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListPorCategoriasComponent implements OnInit {
 
-  produtos: any[] = [];
+  baseUrl = environment.baseUrl;
+  produtos = [];
 
   constructor(private http: HttpClient,
               private route: ActivatedRoute) { 
   }
 
   ngOnInit() {
+    
     this.route.params.forEach(params => {
       const categoria = params['categoria'];
       if(categoria !== undefined) {
@@ -23,8 +26,8 @@ export class ListPorCategoriasComponent implements OnInit {
         const params = new HttpParams()
               .set('categoria', categoria);
 
-        this.http.get("http://localhost:3000/produtos", {params}).toPromise()
-        .then(data => {
+        this.http.get(`${this.baseUrl}/produtos`, {params}).toPromise()
+        .then((data:any[]) => {
           this.produtos = data;
         });
       }

@@ -9,11 +9,6 @@ import { HttpClient } from '@angular/common/http';
 export class AppComponent {
   title = 'app';
 
-  constructor(private http: HttpClient){}
+  constructor(){}
 
-  lerDados() {
-    var url = "http://localhost:3000/comments";
-    this.http.get(url).toPromise()
-    .then(resp => console.log(resp));
-  }
 }

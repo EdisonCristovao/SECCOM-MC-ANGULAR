@@ -1,8 +1,22 @@
 {
   "produtos": [
-    { "id": 1, "descricao": "carro da hora top massa", "price": 1200, "categoria": 1 },
-    { "id": 2, "descricao": "Moto nova, mas nao quero usar", "price": 5, "categoria": 2 },
-    { "id": 3, "descricao": "Vendo sogra", "price": -200, "categoria": 3 },
-    { "id": 4, "descricao": "Vendo minha ex", "price": 0, "categoria": 3 }
+    {
+      "id": 1,
+      "descricao": "carro da hora top massa",
+      "price": 1200,
+      "categoria": 1
+    },
+    {
+      "id": 2,
+      "descricao": "Moto nova, mas nao quero usar",
+      "price": 5,
+      "categoria": 2
+    },
+    {
+      "id": 3,
+      "descricao": "Vendo sogra",
+      "price": -200,
+      "categoria": 3
+    }
   ]
 }
